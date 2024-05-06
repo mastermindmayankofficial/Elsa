@@ -19,13 +19,13 @@ async def openai_answer(client, message):
             try:
                 user_id = message.from_user.id
                 response = openai.Completion.create(
-                    model = "text-davinci-003",
-                    prompt = users_message,
-                    temperature = 0.5,
-                    max_tokens = 1000,
+                    model="text-davinci",
+                    prompt=users_message,
+                    temperature=0.5,
+                    max_tokens=1000,
                     top_p=1,
                     frequency_penalty=0.1,
-                    presence_penalty = 0.0,
+                    presence_penalty=0.0,
                 )
                 btn=[
                         [InlineKeyboardButton(text=f"👀 ᴛᴀᴋᴇ ᴀᴄᴛɪᴏɴ 👀", url=f'https://t.me/{temp.U_NAME}')],
